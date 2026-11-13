@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Проперті — нерухомість у Дніпрі</title>
+<meta name="description" content="Проперті — продаж і оренда квартир, будинків та комерційної нерухомості в Дніпрі. Тел. +380 50 453 32 77">
+<meta property="og:title" content="Проперті — нерухомість у Дніпрі">
+<meta property="og:description" content="Продаж і оренда квартир, будинків та комерційної нерухомості в Дніпрі.">
+<meta property="og:url" content="https://properti.com.ua/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d5c4f'/%3E%3Cpath d='M10 34 L32 14 L54 34' fill='none' stroke='%23d8a85a' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='42' y='16' width='5' height='10' fill='%23d8a85a'/%3E%3Ctext x='32' y='56' text-anchor='middle' font-family='Arial' font-weight='700' font-size='24' fill='%23fff'%3E%D0%9F%3C/text%3E%3C/svg%3E">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+--bg:#f3f5f3; --surface:#ffffff; --ink:#17201d; --muted:#5d6b66; --line:#dde3e0;
+--accent:#1d5c4f; --accent-ink:#ffffff; --brass:#9a6b22; --soft:#e6eeeb; --danger:#a63a2b; --sold:#6b6f6d;
+--display:"Unbounded","Manrope",system-ui,sans-serif;
+--body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+--r:10px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#111715; --surface:#19211e; --ink:#e8eeeb; --muted:#9aa9a3; --line:#2b3632;
+--accent:#5fb39f; --accent-ink:#0d1412; --brass:#d8a85a; --soft:#22302b; --danger:#e07a68; --sold:#8d9390; color-scheme:dark}}
+:root[data-theme="dark"]{
+--bg:#111715; --surface:#19211e; --ink:#e8eeeb; --muted:#9aa9a3; --line:#2b3632;
+--accent:#5fb39f; --accent-ink:#0d1412; --brass:#d8a85a; --soft:#22302b; --danger:#e07a68; --sold:#8d9390; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:700;text-wrap:balance;margin:0;letter-spacing:-.01em}
+a{color:var(--accent)}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);padding:9px 14px;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none;color:var(--ink);white-space:nowrap}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.sm{padding:6px 10px;font-size:13px}
+.btn[disabled]{opacity:.55;cursor:default}
+.label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+/* masthead */
+.mast{border-bottom:1px solid var(--line);background:var(--surface)}
+.mast .wrap{padding-block:28px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between}
+.mast h1{font-size:clamp(24px,4vw,36px)}
+.brand{display:inline-flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:inherit}
+.logo-mark{width:clamp(220px,40vw,360px);max-width:100%;height:auto;flex:none;display:block}
+.lg-g{fill:var(--accent)} .lg-b{fill:var(--brass)} .lg-r{stroke:var(--brass)}
+.sub{font-size:clamp(10px,1.3vw,13px);font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--brass);margin-top:7px}
+.contacts{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.phone{font-variant-numeric:tabular-nums;font-weight:700;font-size:17px;user-select:all}
+/* filters */
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-block:20px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:none;padding:8px 14px;cursor:pointer;font-weight:600;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.filters select,.filters input{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:8px 10px}
+.filters input{width:150px}
+.count{margin-left:auto;color:var(--muted);font-size:13px}
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px;padding-bottom:48px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;display:flex;flex-direction:column;text-align:left;padding:0;transition:transform .15s,border-color .15s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.thumb{position:relative;aspect-ratio:4/3;max-width:100%;background:var(--soft);overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.ph{width:100%;height:100%;display:grid;place-items:center;color:var(--muted);background:repeating-linear-gradient(135deg,var(--soft) 0 14px,transparent 14px 28px)}
+.ph svg{width:46px;height:46px;opacity:.6}
+.chips{position:absolute;top:10px;left:10px;display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:4px 8px;border-radius:6px;background:var(--surface);color:var(--ink)}
+.chip.deal{background:var(--accent);color:var(--accent-ink)}
+.chip.sold{background:var(--sold);color:var(--surface)}
+.chip.ex{background:var(--brass);color:var(--surface)}
+.mediacount{position:absolute;right:10px;bottom:10px;font-size:12px;font-weight:600;background:rgba(0,0,0,.6);color:#fff;padding:3px 8px;border-radius:6px}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.price{font-family:var(--display);font-size:20px;color:var(--brass);font-variant-numeric:tabular-nums}
+.perm{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.card h3{font-family:var(--body);font-size:16px;font-weight:700;line-height:1.35}
+.specs{display:flex;flex-wrap:wrap;gap:4px 14px;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.loc{font-size:13px;color:var(--muted);margin-top:auto}
+.is-sold .thumb img{filter:grayscale(.8)}
+.empty{grid-column:1/-1;text-align:center;padding:60px 16px;color:var(--muted);border:1px dashed var(--line);border-radius:var(--r)}
+/* detail */
+.detail{padding-block:20px 56px}
+.back{margin-bottom:16px}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:820px){.dgrid{grid-template-columns:1fr}}
+.stage{background:#0c100f;border-radius:var(--r);overflow:hidden;aspect-ratio:16/10;max-width:100%;display:grid;place-items:center}
+.stage img,.stage video{width:100%;height:100%;object-fit:contain;display:block}
+.strip{display:flex;gap:8px;overflow-x:auto;padding-block:10px}
+.strip button{flex:0 0 auto;width:86px;height:64px;border-radius:6px;overflow:hidden;border:2px solid transparent;padding:0;cursor:pointer;background:var(--soft);position:relative}
+.strip button[aria-current="true"]{border-color:var(--accent)}
+.strip img,.strip video{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.strip .play{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:20px;background:rgba(0,0,0,.35)}
+.info{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:16px}
+.info h2{font-size:22px}
+.info .price{font-size:28px}
+.table{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:14px}
+.table dt{color:var(--muted)}
+.table dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.desc{white-space:pre-wrap;max-width:68ch;margin-top:22px}
+.vlinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;font-weight:600;z-index:60;max-width:calc(100% - 32px)}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer .wrap{padding-block:20px}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="application/json" id="site-data">{"agent":{"name":"","tagline":"","phone":"+380 50 453 32 77","messenger":"","about":""},"listings":[{"id":"ex1","example":true,"title":"2-кімнатна квартира з ремонтом у новобудові","deal":"Продаж","type":"Квартира","price":68000,"currency":"USD","area":62,"rooms":2,"floor":7,"floors":16,"district":"Центр","address":"вул. Прикладна, 12","desc":"Світла квартира з панорамними вікнами, сучасний ремонт, вбудована кухня. Закрита територія, підземний паркінг, поруч школа та парк.\n\nЦе приклад оголошення — відредагуйте або видаліть його.","status":"Активний","media":[],"videoLinks":[],"created":1762900000000},{"id":"ex2","example":true,"title":"Будинок 140 м² з ділянкою 8 соток","deal":"Продаж","type":"Будинок","price":115000,"currency":"USD","area":140,"rooms":4,"floor":2,"floors":2,"district":"Передмістя","address":"с. Приклад, вул. Садова","desc":"Двоповерховий цегляний будинок, автономне опалення, свердловина, гараж на 2 авто. Ділянка з садом.\n\nЦе приклад оголошення — відредагуйте або видаліть його.","status":"Активний","media":[],"videoLinks":[],"created":1762800000000},{"id":"ex3","example":true,"title":"1-кімнатна квартира біля метро, довгострокова оренда","deal":"Оренда","type":"Квартира","price":14000,"currency":"UAH","area":38,"rooms":1,"floor":4,"floors":9,"district":"Лівий берег","address":"просп. Зразковий, 5","desc":"Меблі та техніка, кондиціонер, інтернет. Можна з тваринами за домовленістю.\n\nЦе приклад оголошення — відредагуйте або видаліть його.","status":"Активний","media":[],"videoLinks":[],"created":1762700000000}]}</script>
+<script id="site-app">
+(function(){
+const SRC = document.getElementById('site-data');
+let DATA;
+try { DATA = JSON.parse(SRC.textContent); } catch(e) { DATA = {agent:{},listings:[]}; }
+DATA.agent = DATA.agent || {}; DATA.listings = DATA.listings || [];
+const root = document.getElementById('root');
+let canEdit = false, artifactNS = null, assetsNS = null;
+const ui = { deal:'Усі', type:'', rooms:'', maxPrice:'', modal:null, galleryIdx:0, saving:false };
+const TYPES = ['Квартира','Будинок','Комерція','Ділянка','Гараж'];
+const CUR = {USD:'$',UAH:'₴',EUR:'€'};
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const nf = new Intl.NumberFormat('uk-UA');
+const money = (v,c) => v ? (c==='UAH' ? nf.format(v)+' ₴' : (CUR[c]||'$')+nf.format(v)) : 'Ціна за запитом';
+const uid = () => 'o' + Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+const LOGO = '<svg class="logo-mark" viewBox="0 0 520 140" aria-hidden="true"><rect class="lg-b" x="372" y="14" width="18" height="24"/><path class="lg-r" fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="M20 60 L260 10 L500 60"/><text class="lg-g" x="260" y="132" text-anchor="middle" font-family="Unbounded, Manrope, sans-serif" font-weight="700" font-size="64" textLength="470" lengthAdjust="spacingAndGlyphs">ПРОПЕРТІ</text></svg>';
+const houseSvg ='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>';
+function toast(msg){
+const t = document.createElement('div'); t.className='toast'; t.textContent = msg; t.setAttribute('role','status');
+document.body.appendChild(t); setTimeout(()=>t.remove(), 2800);
+}
+function cover(l){ return (l.media||[]).find(m=>m.kind==='image'); }
+function specs(l){
+const a=[];
+if(l.area) a.push(l.area+' м²');
+if(l.rooms) a.push(l.rooms+' кімн.');
+if(l.floor) a.push('поверх '+l.floor+(l.floors?'/'+l.floors:''));
+return a;
+}
+function perM(l){ return (l.deal==='Продаж' && l.price && l.area) ? money(Math.round(l.price/l.area), l.currency)+' / м²' : ''; }
+/* ---------- views ---------- */
+function render(){
+const id = (location.hash.match(/^#obj-([\w-]+)$/)||[])[1];
+const l = id && DATA.listings.find(x=>x.id===id);
+const a = DATA.agent;
+let html = `
+<header class="mast"><div class="wrap">
+<div><h1 style="margin:0"><a class="brand" href="#" aria-label="Проперті, нерухомість у Дніпрі">${LOGO}<span class="sub">Нерухомість · Дніпро</span></a></h1></div>
+<div class="contacts">${contactsHtml()}</div>
+</div></header>`;
+if(canEdit){
+const ex = DATA.listings.some(x=>x.example);
+html += `<div class="ownerbar"><div class="wrap">
+<span class="note">${ex?'Режим власника. Три оголошення позначені як приклади — замініть їх своїми.':'Режим власника. Відвідувачі бачать сайт без цієї панелі.'}</span>
+<button class="btn sm" data-act="profile">Мої контакти</button>
+<button class="btn sm primary" data-act="new">+ Додати об'єкт</button>
+</div></div>`;
+}
+html += `<main class="wrap">${l ? detailHtml(l) : listHtml()}</main>
+<footer><div class="wrap">Проперті · нерухомість у Дніпрі${a.name?' · '+esc(a.name):''}${a.phone?' · '+esc(a.phone):''}</div></footer>`;
+if(ui.modal) html += ui.modal.html();
+root.innerHTML = html;
+if(ui.modal && ui.modal.after) ui.modal.after();
+}
+function contactsHtml(){
+const a = DATA.agent; let h='';
+if(a.phone){
+const tel = a.phone.replace(/[^\d+]/g,'');
+h += `<span class="phone">${esc(a.phone)}</span><button class="btn sm" data-act="copy" data-v="${esc(a.phone)}">Копіювати</button><a class="btn sm" href="tel:${esc(tel)}">Подзвонити</a>`;
+}
+if(a.messenger && /^https?:\/\//.test(a.messenger)) h += `<a class="btn sm primary" href="${esc(a.messenger)}" target="_blank" rel="noopener">Написати</a>`;
+return h;
+}
+function filtered(){
+return DATA.listings.filter(l=>{
+if(ui.deal!=='Усі' && l.deal!==ui.deal) return false;
+if(ui.type && l.type!==ui.type) return false;
+if(ui.rooms){ const r=+ui.rooms; if(r===4 ? (l.rooms||0)<4 : l.rooms!==r) return false; }
+if(ui.maxPrice && l.price && l.price>+ui.maxPrice) return false;
+return true;
+}).sort((a,b)=> (a.status==='Продано')-(b.status==='Продано') || (b.created||0)-(a.created||0));
+}
+function listHtml(){
+const items = filtered();
+const seg = ['Усі','Продаж','Оренда'].map(d=>`<button data-deal="${d}" aria-pressed="${ui.deal===d}">${d}</button>`).join('');
+return `
+<div class="filters">
+<div class="seg" role="group" aria-label="Тип угоди">${seg}</div>
+<select id="f-type" aria-label="Тип об'єкта"><option value="">Усі типи</option>${TYPES.map(t=>`<option ${ui.type===t?'selected':''}>${t}</option>`).join('')}</select>
+<select id="f-rooms" aria-label="Кімнати"><option value="">Кімнат: будь-яка</option>${[1,2,3].map(r=>`<option value="${r}" ${ui.rooms==r?'selected':''}>${r} кімн.</option>`).join('')}<option value="4" ${ui.rooms=='4'?'selected':''}>4+ кімн.</option></select>
+<input id="f-max" type="number" inputmode="numeric" min="0" placeholder="Ціна до" value="${esc(ui.maxPrice)}" aria-label="Максимальна ціна">
+<span class="count">${items.length} ${plural(items.length,'об\'єкт','об\'єкти','об\'єктів')}</span>
+</div>
+<div class="grid">${items.length ? items.map(cardHtml).join('') : `<div class="empty">${DATA.listings.length?'Немає об\'єктів за цими фільтрами.':(canEdit?'Додайте перший об\'єкт кнопкою «+ Додати об\'єкт».':'Об\'єкти скоро з\'являться.')}</div>`}</div>`;
+}
+function plural(n,a,b,c){ const m=n%10, h=n%100; return m===1&&h!==11?a:(m>=2&&m<=4&&(h<10||h>=20)?b:c); }
+function cardHtml(l){
+const c = cover(l), n=(l.media||[]).length + (l.videoLinks||[]).length, sold=l.status==='Продано';
+return `<button class="card ${sold?'is-sold':''}" data-open="${esc(l.id)}">
+<div class="thumb">${c?`<img src="${esc(c.url)}" alt="" loading="lazy">`:`<div class="ph">${houseSvg}</div>`}
+<div class="chips"><span class="chip deal">${esc(l.deal)}</span>${sold?'<span class="chip sold">Продано</span>':''}${l.example?'<span class="chip ex">Приклад</span>':''}</div>
+${n?`<span class="mediacount">${n} медіа</span>`:''}
+</div>
+<div class="body">
+<div><span class="price">${money(l.price,l.currency)}${l.deal==='Оренда'&&l.price?'<span class="perm"> / міс</span>':''}</span></div>
+${perM(l)?`<div class="perm">${perM(l)}</div>`:''}
+<h3>${esc(l.title||'Без назви')}</h3>
+<div class="specs">${specs(l).map(s=>`<span>${s}</span>`).join('')}</div>
+<div class="loc">${esc([l.district,l.address].filter(Boolean).join(', '))}</div>
+</div></button>`;
+}
+function detailHtml(l){
+const media = l.media||[];
+const i = Math.min(ui.galleryIdx, Math.max(media.length-1,0));
+const cur = media[i];
+const stage = cur ? (cur.kind==='video'
+? `<video src="${esc(cur.url)}" controls playsinline preload="metadata"></video>`
+: `<img src="${esc(cur.url)}" alt="${esc(l.title)}">`)
+: `<div class="ph">${houseSvg}</div>`;
+const strip = media.length>1 ? `<div class="strip">${media.map((m,k)=>`<button data-g="${k}" aria-current="${k===i}" aria-label="Медіа ${k+1}">${m.kind==='video'?`<video src="${esc(m.url)}#t=0.5" muted preload="metadata"></video><span class="play">▶</span>`:`<img src="${esc(m.url)}" alt="" loading="lazy">`}</button>`).join('')}</div>` : '';
+const rows = [['Угода',l.deal],['Тип',l.type],['Площа',l.area&&l.area+' м²'],['Кімнат',l.rooms],['Поверх',l.floor&&(l.floor+(l.floors?' з '+l.floors:''))],['Район',l.district],['Адреса',l.address],['Статус',l.status]]
+.filter(r=>r[1]).map(r=>`<dt>${r[0]}</dt><dd>${esc(r[1])}</dd>`).join('');
+const vl = (l.videoLinks||[]).filter(u=>/^https?:\/\//.test(u));
+return `<div class="detail">
+<a class="btn sm back" href="#">← Усі об'єкти</a>
+<div class="dgrid">
+<div style="min-width:0">
+<div class="stage">${stage}</div>${strip}
+${vl.length?`<div class="vlinks">${vl.map((u,k)=>`<a class="btn sm" href="${esc(u)}" target="_blank" rel="noopener">▶ Відео ${vl.length>1?k+1:''}</a>`).join('')}</div>`:''}
+${l.desc?`<div class="desc">${esc(l.desc)}</div>`:''}
+</div>
+<aside class="info">
+<div class="chips" style="position:static">${l.status==='Продано'?'<span class="chip sold">Продано</span>':`<span class="chip deal">${esc(l.deal)}</span>`}${l.example?'<span class="chip ex">Приклад</span>':''}</div>
+<h2>${esc(l.title||'Без назви')}</h2>
+<div><div class="price">${money(l.price,l.currency)}${l.deal==='Оренда'&&l.price?'<span class="perm"> / міс</span>':''}</div>${perM(l)?`<div class="perm">${perM(l)}</div>`:''}</div>
+<dl class="table">${rows}</dl>
+<div><div class="label" style="margin-bottom:8px">Зв'язатися</div><div class="contacts">${contactsHtml()}</div></div>
+${canEdit?`<div class="ownerrow">
+<button class="btn sm" data-act="edit" data-id="${esc(l.id)}">Редагувати</button>
+<button class="btn sm" data-act="sold" data-id="${esc(l.id)}">${l.status==='Продано'?'Повернути в продаж':'Позначити «Продано»'}</button>
+<button class="btn sm danger" data-act="del" data-id="${esc(l.id)}">Видалити</button>
+</div>`:''}
+</aside>
+</div></div>`;
+}
+/* ---------- events ---------- */
+root.addEventListener('click',async e=>{
+const t=e.target;
+const open=t.closest('[data-open]'); if(open){ ui.galleryIdx=0; location.hash='obj-'+open.dataset.open; return; }
+const deal=t.closest('[data-deal]'); if(deal){ ui.deal=deal.dataset.deal; render(); return; }
+const g=t.closest('[data-g]'); if(g){ ui.galleryIdx=+g.dataset.g; render(); return; }
+const back=t.closest('a.back'); if(back){ e.preventDefault(); history.pushState(null,'',location.pathname+location.search); render(); return; }
+const act=t.closest('[data-act]'); if(!act) return;
+const a=act.dataset.act, id=act.dataset.id, l=id&&DATA.listings.find(x=>x.id===id);
+if(a==='copy'){
+try{ await navigator.clipboard.writeText(act.dataset.v); toast('Номер скопійовано'); }
+catch(_){ const p=root.querySelector('.phone'); if(p){ const r=document.createRange(); r.selectNodeContents(p); const s=getSelection(); s.removeAllRanges(); s.addRange(r);} toast('Номер виділено — скопіюйте його'); }
+}
+else if(a==='close'){ ui.modal=null; render(); }
+else if(a==='new') openEditor(null);
+else if(a==='profile') openProfile();
+else if(a==='edit' && l) openEditor(l);
+else if(a==='sold' && l){ l.status = l.status==='Продано'?'Активний':'Продано'; delete l.example; render(); await save(); }
+else if(a==='del' && l){
+if(!act.classList.contains('armed')){ act.classList.add('armed'); act.textContent='Так, видалити назавжди'; setTimeout(()=>{ if(act.isConnected){act.classList.remove('armed');act.textContent='Видалити';} },4000); return; }
+DATA.listings = DATA.listings.filter(x=>x.id!==id);
+history.pushState(null,'',location.pathname+location.search); render(); await save();
+}
+});
+root.addEventListener('change',e=>{
+if(e.target.id==='f-type'){ ui.type=e.target.value; render(); }
+if(e.target.id==='f-rooms'){ ui.rooms=e.target.value; render(); }
+});
+root.addEventListener('input',e=>{
+if(e.target.id==='f-max'){ ui.maxPrice=e.target.value; clearTimeout(ui._t); ui._t=setTimeout(()=>{ const pos=e.target.selectionStart; render(); const el=document.getElementById('f-max'); if(el){el.focus(); try{el.setSelectionRange(pos,pos);}catch(_){}} },350); }
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape' && ui.modal && !ui.saving){ ui.modal=null; render(); } });
+addEventListener('hashchange',()=>{ ui.galleryIdx=0; render(); scrollTo(0,0); });
+render();
+})();
+</script>
+</body>
+</html>
