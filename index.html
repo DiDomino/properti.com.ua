@@ -105,18 +105,14 @@ footer .wrap{padding-block:20px}
 </style>
 </head>
 <body>
-<div id="root"></div>
-<script type="application/json" id="site-data">{"agent":{"name":"","tagline":"","phone":"+380 50 453 32 77","messenger":"","about":""},"listings":[{"id":"ex1","example":true,"title":"2-кімнатна квартира з ремонтом у новобудові","deal":"Продаж","type":"Квартира","price":68000,"currency":"USD","area":62,"rooms":2,"floor":7,"floors":16,"district":"Центр","address":"вул. Прикладна, 12","desc":"Світла квартира з панорамними вікнами, сучасний ремонт, вбудована кухня. Закрита територія, підземний паркінг, поруч школа та парк.\n\nЦе приклад оголошення — відредагуйте або видаліть його.","status":"Активний","media":[],"videoLinks":[],"created":1762900000000},{"id":"ex2","example":true,"title":"Будинок 140 м² з ділянкою 8 соток","deal":"Продаж","type":"Будинок","price":115000,"currency":"USD","area":140,"rooms":4,"floor":2,"floors":2,"district":"Передмістя","address":"с. Приклад, вул. Садова","desc":"Двоповерховий цегляний будинок, автономне опалення, свердловина, гараж на 2 авто. Ділянка з садом.\n\nЦе приклад оголошення — відредагуйте або видаліть його.","status":"Активний","media":[],"videoLinks":[],"created":1762800000000},{"id":"ex3","example":true,"title":"1-кімнатна квартира біля метро, довгострокова оренда","deal":"Оренда","type":"Квартира","price":14000,"currency":"UAH","area":38,"rooms":1,"floor":4,"floors":9,"district":"Лівий берег","address":"просп. Зразковий, 5","desc":"Меблі та техніка, кондиціонер, інтернет. Можна з тваринами за домовленістю.\n\nЦе приклад оголошення — відредагуйте або видаліть його.","status":"Активний","media":[],"videoLinks":[],"created":1762700000000}]}</script>
+<div id="root"><p style="padding:40px 16px;text-align:center;color:#5d6b66">Завантаження…</p></div>
 <script id="site-app">
 (function(){
-const SRC = document.getElementById('site-data');
-let DATA;
-try { DATA = JSON.parse(SRC.textContent); } catch(e) { DATA = {agent:{},listings:[]}; }
-DATA.agent = DATA.agent || {}; DATA.listings = DATA.listings || [];
+let DATA = {agent:{phone:'+380 50 453 32 77'},listings:[]};
 const root = document.getElementById('root');
 let canEdit = false, artifactNS = null, assetsNS = null;
 const ui = { deal:'Усі', type:'', rooms:'', maxPrice:'', modal:null, galleryIdx:0, saving:false };
-const TYPES = ['Квартира','Будинок','Комерція','Ділянка','Гараж'];
+const TYPES = ['Квартира','Кімната','Будинок','Комерція','Ділянка','Гараж'];
 const CUR = {USD:'$',UAH:'₴',EUR:'€'};
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const nf = new Intl.NumberFormat('uk-UA');
@@ -275,7 +271,7 @@ if(e.target.id==='f-max'){ ui.maxPrice=e.target.value; clearTimeout(ui._t); ui._
 });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape' && ui.modal && !ui.saving){ ui.modal=null; render(); } });
 addEventListener('hashchange',()=>{ ui.galleryIdx=0; render(); scrollTo(0,0); });
-render();
+fetch('listings.json?v='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(d=>{ DATA={agent:d.agent||{},listings:d.listings||[]}; render(); }).catch(()=>render());
 })();
 </script>
 </body>
