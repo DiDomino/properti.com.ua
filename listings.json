@@ -8,6 +8,82 @@
  },
  "listings": [
   {
+   "id": "ihren-ihrenskyi",
+   "title": "Цегляний будинок 56,8 м² на ділянці 7 соток, Ігрень, пров. Ігренський",
+   "deal": "Продаж",
+   "type": "Будинок",
+   "price": 27000,
+   "currency": "USD",
+   "area": 56.8,
+   "rooms": 2,
+   "floor": 1,
+   "floors": 1,
+   "district": "Самарський (Ігрень)",
+   "address": "пров. Ігренський",
+   "status": "Активний",
+   "created": 1794928703818,
+   "videoLinks": [],
+   "desc": "Добротний одноповерховий цегляний будинок на доглянутій ділянці 7 соток в Ігрені.\n\n• Загальна площа 56,8 м², 2 кімнати\n• Автономне газове опалення\n• Центральне водопостачання, септик\n• На ділянці новозбудована бесідка, навіс під автомобіль і невеликий сарай\n• Дорослий сад\n\nЗручна локація: поруч магазини та зупинка громадського транспорту.\n\nДокументи готові до угоди. Земля приватизована, є кадастровий номер.\n\nЦіна: 27 000 $, торг.\nТелефонуйте, покажу в зручний для вас час!",
+   "media": [
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/9e0c7b4c-5521-4974-a73e-7ffa5cf94000.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/884b89a7-03c2-4dc1-946b-905e5f79c761.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/1f1b87a1-1de8-4b7c-bde7-893ac2242d5e.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/f43910f0-b132-4515-8a3a-1f09c199969a.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/57b0750e-2715-48ac-b0f0-5c7ae65b251a.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/562e62fa-e2af-44e6-a0b4-fac4e4fdd693.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/360fc163-077e-4e73-8600-8916dcc14888.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/28fcef56-2bc8-40f9-9c1a-84f526712994.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/9e3aecb7-4ccf-4367-9a96-e90e3b1cb10d.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/32ce3d83-0a05-49ae-b53e-f90469df406a.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/b6e4d225-6b45-492d-8681-58371e3777cd.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/6bc15ffb-decf-49cb-a2fa-62718cfd5b7c.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/4c27db9a-f7f1-4492-bb46-01abd2cefaf3.webp"
+    },
+    {
+     "kind": "image",
+     "url": "https://easybase.b-cdn.net/prod/media/realty/735139/fb298fbd-ad08-4b04-9604-ab264067a64f.webp"
+    }
+   ]
+  },
+  {
    "id": "myrnyi-pivbudynku",
    "title": "Оренда половини будинку, 4 кімнати, автономне опалення, Придніпровськ (р-н Мирного)",
    "deal": "Оренда",
